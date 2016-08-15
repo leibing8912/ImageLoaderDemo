@@ -35,6 +35,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 ImageLoader.getInstance().load(this, testIv, IMAGE_URL);
                 break;
             case R.id.btn_clear:
+                // 清除缓存
                 ImageLoader.getInstance().clearViewCache(testIv);
                 ImageLoader.getInstance().clearMemory(this);
                 ThreadManager.getInstance().getNewCachedThreadPool().execute(new Runnable() {
